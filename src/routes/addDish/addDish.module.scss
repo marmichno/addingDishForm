@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap');
+
+.mainContainer{
+    font-family: 'Glory', sans-serif;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-image:url('../../resources/images/background.jpg');
+    background-size:cover;
+    background-color:rgba(0, 0, 0, 0.700);
+    background-blend-mode:saturation;
+
+    &__contentContainer{
+        border-radius: 10px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width:70%;
+        height:90%;
+        background-color:white;
+
+        &__imgContainer{
+            width:50%;
+            height:100%;
+            background-image:url('../../resources/images/fillerImage.jpg');
+            background-size:cover;
+        }
+
+        &__addDishContainer{
+            width:50%;
+            height:100%;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+
+            &__headerContainer{
+                width:100%;
+                height:20%;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                font-size:2em;
+                letter-spacing:0.1em;
+            }
+
+            &__formContainer{
+                width:100%;
+                height:80%;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:flex-start;
+                position:relative;
+
+                &__submitContainer{
+                    width:100%;
+                    height:20%;
+                    position:absolute;
+                    bottom:0;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+
+                    button{
+                        font-size:1.5em;
+                        padding:0.2em 2em 0.2em 2em;
+                        background-color:rgb(221, 0, 53);
+                        border:none;
+                        width:60%;
+                        color:white;
+                        border-radius:30px;
+                        cursor:pointer;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,56 @@
+.inputContainer{
+    width:60%;
+    display:flex;
+    align-items:flex-start;
+    justify-content:flex-start;
+    flex-direction:column;
+    font-size:2em;
+    margin-bottom:0.6em;
+
+    label{
+        font-size:0.7em;
+    }
+
+    &__input{
+        width: 100%;
+
+        select{
+            font-size:1em;
+            padding:0.2em;
+            padding-left:0;
+            background-color:transparent;
+            border:none;
+            border-bottom:1px solid;
+            margin-bottom:0.1em;
+            width:100%;
+
+            &:focus{
+                outline:none;
+            }
+
+            option{
+                cursor:pointer;
+            }
+        }
+
+        input{
+            font-size:1em;
+            padding:0.2em;
+            padding-left:0;
+            background-color:transparent;
+            border:none;
+            border-bottom:1px solid;
+            margin-bottom:0.1em;
+            width:100%;
+
+            &:focus{
+                outline:none;
+            }
+        }
+    }
+
+    &__error{
+        font-size:0.55em;
+        color:red;
+    }
+}
