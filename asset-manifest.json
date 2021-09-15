@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/addingDishForm/static/css/main.b92b155a.chunk.css",
+    "main.js": "/addingDishForm/static/js/main.770ae458.chunk.js",
+    "main.js.map": "/addingDishForm/static/js/main.770ae458.chunk.js.map",
+    "runtime-main.js": "/addingDishForm/static/js/runtime-main.b8a6b92d.js",
+    "runtime-main.js.map": "/addingDishForm/static/js/runtime-main.b8a6b92d.js.map",
+    "static/js/2.ddf2f899.chunk.js": "/addingDishForm/static/js/2.ddf2f899.chunk.js",
+    "static/js/2.ddf2f899.chunk.js.map": "/addingDishForm/static/js/2.ddf2f899.chunk.js.map",
+    "index.html": "/addingDishForm/index.html",
+    "static/css/main.b92b155a.chunk.css.map": "/addingDishForm/static/css/main.b92b155a.chunk.css.map",
+    "static/js/2.ddf2f899.chunk.js.LICENSE.txt": "/addingDishForm/static/js/2.ddf2f899.chunk.js.LICENSE.txt",
+    "static/media/addDish.module.scss": "/addingDishForm/static/media/fillerImage.1e460af2.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b8a6b92d.js",
+    "static/js/2.ddf2f899.chunk.js",
+    "static/css/main.b92b155a.chunk.css",
+    "static/js/main.770ae458.chunk.js"
+  ]
+}
