@@ -21,7 +21,7 @@ Live preview: https://marmichno.github.io/addingDishForm/
 
 ## Installation
 
-And run those comands in project directory:
+Run those comands in project directory:
 ```sh
 git clone https://github.com/marmichno/addingDishForm.git
 cd addingDishForm
