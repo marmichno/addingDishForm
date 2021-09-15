@@ -1,5 +1,7 @@
 # Add dish form
 
+![addingDishForm](https://user-images.githubusercontent.com/72525469/133504575-93bfc8cc-2341-42c9-972e-175e0f52a3e0.gif)
+
 ## About project
 
 Simple form made for adding dishes to backend.<br>
