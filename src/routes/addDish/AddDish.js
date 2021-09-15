@@ -1,11 +1,13 @@
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import {validationSchema} from './validationSchema/validationSchema';
+import { postNewDish } from './requests/postNewDish';
 import AddDishCSS from '../addDish/addDish.module.scss';
 import { InputField } from './components/inputField/InputField';
+import {useState} from 'react';
 
 export const AddDish = () => {
 
-    
+    const [httpResponse, setHttpResponse] = useState("");
 
     return(
         <div className={AddDishCSS.mainContainer}>
@@ -13,14 +15,15 @@ export const AddDish = () => {
                 name: '',
                 preparation_time: '',
                 type: 'pizza',
-                no_of_slices: "",
-                diameter: "",
-                spiciness_scale: "",
-                slices_of_bread: ""
+                no_of_slices: '',
+                diameter: '',
+                spiciness_scale: '',
+                slices_of_bread: ''
             }}
             validationSchema={validationSchema}
-            onSubmit={(data) =>{
-                console.log(JSON.stringify(data, null, 2))
+            onSubmit={async(data) =>{
+                const response = await postNewDish(data);
+                setHttpResponse(response);
             }}
             >
                 {({values}) =>(
@@ -47,6 +50,10 @@ export const AddDish = () => {
                                         <InputField name="slices_of_bread" text="Slices of bread" placeholder="3" type="number"/>
                                     )}
                                         <div className={AddDishCSS.mainContainer__contentContainer__addDishContainer__formContainer__submitContainer}>
+                                            {httpResponse === "Dish added succesfully" ? 
+                                            <p style={{color:"green"}}>{httpResponse}</p> 
+                                            : 
+                                            <p style={{color:"red"}}>{httpResponse}</p>}
                                             <button type="submit">Add dish</button>
                                         </div>
                                 </Form>

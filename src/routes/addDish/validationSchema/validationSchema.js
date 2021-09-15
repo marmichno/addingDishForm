@@ -3,8 +3,10 @@ import * as Yup from "yup";
 export const validationSchema = Yup.object({
     name: Yup.string()
         .required("Dish name is required")
+        .max(30, 'Must be 30 charactes or less')
         .min(4, 'Must be at least 4 characters'),
     preparation_time: Yup.string()
+        .matches(/^(((([0-1][0-9])|(2[0-3])):?[0-5][0-9]:?[0-5][0-9]+$))/g , 'Wrong format, please input as hh:mm:ss')
         .required('Preparation time is required'),
     no_of_slices: Yup.number().notRequired()
         .when('type', {
@@ -17,8 +19,7 @@ export const validationSchema = Yup.object({
         .when('type', {
             is: (val) => val !== "pizza",
             then: Yup.number().notRequired()
-        })
-        ,
+        }),
     diameter: Yup.number()
         .when('type', {
             is: (val) => val === "pizza",

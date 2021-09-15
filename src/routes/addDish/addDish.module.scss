@@ -3,6 +3,10 @@
     padding:0;
 }
 
+body{
+    overflow-x:hidden;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Glory:wght@100&display=swap');
 
 .mainContainer{
@@ -16,6 +20,16 @@
     background-size:cover;
     background-color:rgba(0, 0, 0, 0.700);
     background-blend-mode:saturation;
+    min-height:900px;
+    overflow-x:hidden;
+
+    @media screen and(max-width:1200px){
+        font-size:14px;
+    }
+
+    @media screen and(max-width:660px){
+        font-size:13px;
+    }
 
     &__contentContainer{
         border-radius: 10px;
@@ -26,11 +40,37 @@
         height:90%;
         background-color:white;
 
+        @media screen and(max-width:940px){
+            width:80%;
+        }
+
+        @media screen and(max-width:720px){
+            width:90%;
+        }
+
+        @media screen and(max-width:660px){
+            flex-direction:column;
+        }
+
+        @media screen and(max-width:660px){
+            width:90%;
+            height:90%;
+        }
+
+        @media screen and(max-width:500px){
+            width:100%;
+        }
+
         &__imgContainer{
             width:50%;
             height:100%;
             background-image:url('../../resources/images/fillerImage.jpg');
             background-size:cover;
+
+            @media screen and(max-width:660px){
+                height:20%;
+                width:100%;
+            }
         }
 
         &__addDishContainer{
@@ -41,6 +81,11 @@
             align-items:center;
             justify-content:center;
 
+            @media screen and(max-width:660px){
+                width:100%;
+                height:80%;
+            }
+
             &__headerContainer{
                 width:100%;
                 height:20%;
@@ -49,6 +94,10 @@
                 justify-content:center;
                 font-size:2em;
                 letter-spacing:0.1em;
+
+                @media screen and(max-width:660px){
+                    height:10%;
+                }
             }
 
             &__formContainer{
@@ -60,6 +109,10 @@
                 justify-content:flex-start;
                 position:relative;
 
+                @media screen and(max-width:660px){
+                    height:80%;
+                }
+
                 &__submitContainer{
                     width:100%;
                     height:20%;
@@ -68,6 +121,16 @@
                     display:flex;
                     align-items:center;
                     justify-content:center;
+                    flex-direction: column-reverse;
+
+                    p{
+                        margin-top:0.2em;
+                        font-size:1.2em;
+                    }
+
+                    @media screen and(max-width:660px){
+                        height:10%;
+                    }
 
                     button{
                         font-size:1.5em;
