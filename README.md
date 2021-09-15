@@ -8,6 +8,8 @@ There is 3 types of dishes - pizza, soup and sandwich.<br>
 Input fields are conditionally rendered based on selected dish type.<br>
 All input fields have diffrent requirements, input is validated using yup.
 
+Live preview: https://marmichno.github.io/addingDishForm/
+
 ## Tech
 
 - react
