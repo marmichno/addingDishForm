@@ -18,9 +18,7 @@ export const postNewDish = async (dishData) => {
             delete dishData['spiciness_scale']
             break;
     }
-
-    console.log(dishData);
-
+    
     const data = JSON.stringify(dishData);
 
     const requestOptions = {
