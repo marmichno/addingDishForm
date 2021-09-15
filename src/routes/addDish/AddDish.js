@@ -8,6 +8,7 @@ import {useState} from 'react';
 export const AddDish = () => {
 
     const [httpResponse, setHttpResponse] = useState("");
+    const [showSubmitInfo, setShowSubmitInfo] = useState(false);
 
     return(
         <div className={AddDishCSS.mainContainer}>
@@ -24,6 +25,8 @@ export const AddDish = () => {
             onSubmit={async(data) =>{
                 const response = await postNewDish(data);
                 setHttpResponse(response);
+                setShowSubmitInfo(true);
+                setTimeout(() => setShowSubmitInfo(false), 4000)
             }}
             >
                 {({values}) =>(
@@ -51,9 +54,9 @@ export const AddDish = () => {
                                     )}
                                         <div className={AddDishCSS.mainContainer__contentContainer__addDishContainer__formContainer__submitContainer}>
                                             {httpResponse === "Dish added succesfully" ? 
-                                            <p style={{color:"green"}}>{httpResponse}</p> 
+                                            showSubmitInfo && (<p style={{color:"green"}}>{httpResponse}</p>)
                                             : 
-                                            <p style={{color:"red"}}>{httpResponse}</p>}
+                                            showSubmitInfo && (<p style={{color:"red"}}>{httpResponse}</p>)}
                                             <button type="submit">Add dish</button>
                                         </div>
                                 </Form>
