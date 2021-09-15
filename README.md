@@ -17,7 +17,7 @@ Live preview: https://marmichno.github.io/addingDishForm/
 - react
 - sass - css modules with bem notation
 - HTML
-- formik and yup - formik and form validation
+- formik and yup - managing form and validation
 
 ## Installation
 
