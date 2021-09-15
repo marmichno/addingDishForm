@@ -22,7 +22,7 @@ Live preview: https://marmichno.github.io/addingDishForm/
 And run those comands in project directory:
 ```sh
 git clone https://github.com/marmichno/addingDishForm.git
-cd addDishForm
+cd addingDishForm
 npm install
 ```
 
